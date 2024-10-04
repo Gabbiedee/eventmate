@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Inter", sans-serif;
+}
+
+body{
+    background-color: rgb(232, 230, 228);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.main{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.sigupText{
+    text-align: center;
+    width: 33%;
+    margin: 10px;
+
+}
+
+.sigupText h1{
+    background-color: #17152E;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+
+}
+
+.createAccountText{
+    padding: 5px 0;
+}
+
+.SignupForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%; 
+    
+}
+
+form{
+    width: 50%;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.InputForm {
+    margin: 10px 0;
+    position: relative;
+
+}
+
+.InputForm i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.InputForm input, select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 40px;
+    outline: none;
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+button {
+    background-color: #FF7A00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.socials{
+    padding: 0 20px;
+}
+
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+   
+}
+
+.footer a{
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+
