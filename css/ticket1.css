@@ -1,0 +1,312 @@
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .search input {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+nav .search input:focus {
+    border-color: #ff6600;
+    outline: none;
+}
+
+nav .nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #ff6600;
+}
+
+/* Ticket Selection Section */
+.ticket-selection {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.ticket-selection h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.tickets {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Ticket Card */
+.ticket-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0; /* for fade-in animation */
+}
+
+.ticket-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-card h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+.price {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.ticket-card ul {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.availability {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff944d;
+    transform: scale(1.05);
+}
+
+/* Selection Summary */
+.selection-summary {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInLeft 0.8s ease forwards;
+    opacity: 0; /* for fade-in animation */
+}
+
+/* Browse More Section */
+/* Browse More Section - Fixed Bottom Right */
+.browse-more {
+    position:relative;
+    bottom: 200px;
+    left: 70%;
+    width: 380px; /* Adjusted to fit a 2x2 grid */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.browse-more h2 {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Event Cards in 2x2 Grid */
+.event-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Event Card Styling */
+.event-card {
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0; /* for fade-in animation */
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.event-card h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+.event-card p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
+
+/* Get Ticket Button */
+.get-ticket-btn {
+    margin-top: 5px;
+    padding: 8px 12px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.get-ticket-btn:hover {
+    background-color: #ff944d;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f1d3f;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-row {
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .footer-card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-card p {
+    line-height: 1.5rem;
+    font-size: 0.7rem;
+    opacity: 50%;
+  }
+  
+  .footer-card-body {
+    margin: 10px 0;
+  }
+  
+  .footer-card-body h4 {
+    padding: 5px 0;
+  }
+  .footer-card li {
+    padding: 7px 0;
+    font-size: 0.9rem;
+    opacity: 50%;
+  }
+  
+  .footer hr {
+    height: 1px;
+    width: 80%;
+    background-color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .tickets, .event-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
